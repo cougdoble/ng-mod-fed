@@ -38,7 +38,7 @@ jobs:
       - name: install dependencies, build, and test
         run: |
           yarn
-          nx run shell:build:production
+          yarn run build
       - name: 'Deploy to Azure WebApp'
         uses: azure/webapps-deploy@v2
         with:
