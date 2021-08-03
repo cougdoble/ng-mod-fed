@@ -27,12 +27,11 @@
     ]
   },
   "projects": {
-    "shell": {
+    "mfe1": {
       "tags": []
     },
-    "shell-e2e": {
-      "tags": [],
-      "implicitDependencies": ["shell"]
+    "shell": {
+      "tags": []
     }
   }
 }
