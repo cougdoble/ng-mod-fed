@@ -41,6 +41,9 @@ jobs:
       - name: install dependencies, build, and test
         run: |
           yarn
+      - name: install nx
+        shell: bash
+        run: npm i -g nx
       - name: Build Affected apps
         shell: bash
         run: nx affected:build --base=main~1 --head=main
