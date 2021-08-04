@@ -43,7 +43,7 @@ jobs:
           yarn
       - name: Build Affected apps
         shell: bash
-        run: yarn run affected:build
+        run: yarn run affected:build --base=main~1 --head=main
       - name: 'Deploy to Shell app to Azure WebApp'
         if: hashFiles('./dist/apps/shell/index.html') != ''
         uses: azure/webapps-deploy@v2
