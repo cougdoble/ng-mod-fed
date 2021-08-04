@@ -23,6 +23,8 @@ on:
 env:
   AZURE_WEBAPP_NAME: ng-mod-fed # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: './dist/apps/shell' # set this to the path to your web app project, defaults to the repository root
+  AZURE_WEBAPP_NAME2: ng-mod-fed-mfe1
+  AZURE_WEBAPP_PACKAGE_PATH2: './dist/apps/mfe1'
   NODE_VERSION: '14.x' # set this to the node version to use
 
 jobs:
@@ -39,10 +41,21 @@ jobs:
       - name: install dependencies, build, and test
         run: |
           yarn
-          yarn run build
-      - name: 'Deploy to Azure WebApp'
+      - uses: mansagroup/nrwl-nx-action@v2
+        with:
+          targets: lint,test,build
+          affected: 'true'
+      - name: 'Deploy to Shell app to Azure WebApp'
+        if: hashFiles(env.AZURE_PACKAGE_PATH + '/index.html') != ''
         uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+      - name: 'Deploy to mfe1 app to Azure WebApp'
+        if: hashFiles(env.AZURE_PACKAGE_PATH + '/index.html') != ''
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: ${{ env.AZURE_WEBAPP_NAME2 }}
+          publish-profile: ${{ secrets.MFE1_AZURE_PUBLISH_PROFILE }}
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH2 }}
