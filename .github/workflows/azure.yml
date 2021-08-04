@@ -46,14 +46,14 @@ jobs:
           targets: lint,test,build
           affected: 'true'
       - name: 'Deploy to Shell app to Azure WebApp'
-        if: hashFiles(env.AZURE_PACKAGE_PATH + '/index.html') != ''
+        if: hashFiles('./dist/apps/shell/index.html') != ''
         uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
       - name: 'Deploy to mfe1 app to Azure WebApp'
-        if: hashFiles(env.AZURE_PACKAGE_PATH + '/index.html') != ''
+        if: hashFiles('./dist/apps/mfe1/index.html') != ''
         uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME2 }}
