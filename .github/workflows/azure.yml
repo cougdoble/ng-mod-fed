@@ -46,7 +46,7 @@ jobs:
         run: npm i -g nx
       - name: Build Affected apps
         shell: bash
-        run: nx affected:build --base=HEAD~1
+        run: nx affected:build --base=origin/main~1
       - name: 'Deploy to Shell app to Azure WebApp'
         if: hashFiles('./dist/apps/shell/index.html') != ''
         uses: azure/webapps-deploy@v2
