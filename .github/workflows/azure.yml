@@ -41,10 +41,9 @@ jobs:
       - name: install dependencies, build, and test
         run: |
           yarn
-      - uses: mansagroup/nrwl-nx-action@v2
-        with:
-          targets: lint,test,build
-          affected: 'true'
+      - name: Build Affected apps
+        shell: bash
+        run: yarn run affected:build
       - name: 'Deploy to Shell app to Azure WebApp'
         if: hashFiles('./dist/apps/shell/index.html') != ''
         uses: azure/webapps-deploy@v2
