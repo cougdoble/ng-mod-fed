@@ -26,7 +26,7 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       remotes: {
-        mfe1: 'mfe1@https://ng-mod-fed-mfe1/remoteEntry.js',
+        mfe1: 'mfe1@https://ng-mod-fed-mfe1.azurewebsites.net/remoteEntry.js',
       },
       shared: {
         '@angular/core': { singleton: true, strictVersion: true },
