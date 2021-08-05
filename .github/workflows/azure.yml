@@ -15,6 +15,11 @@
 #
 # For more information on GitHub Actions for Azure, refer to https://github.com/Azure/Actions
 # For more samples to get started with GitHub Action workflows to deploy to Azure, refer to https://github.com/Azure/actions-workflow-samples
+
+# Notes:
+# We probably don't need to deploy the index.html file, since we're only loading the remoteEntry file
+# unless we want to be able to access the MFE apps independently -- so maybe we could delete them
+# as a build step
 on:
   push:
     branches:
