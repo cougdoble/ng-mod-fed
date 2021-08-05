@@ -40,9 +40,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ env.NODE_VERSION }}
-        run: git fetch origin main
       - name: install dependencies, build, and test
         run: |
+          git fetch origin main
           yarn
       - name: install nx
         shell: bash
