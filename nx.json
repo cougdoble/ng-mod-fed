@@ -27,6 +27,12 @@
     ]
   },
   "projects": {
+    "example-feature": {
+      "tags": []
+    },
+    "example-shared": {
+      "tags": []
+    },
     "mfe1": {
       "tags": []
     },

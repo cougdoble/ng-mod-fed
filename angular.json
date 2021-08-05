@@ -1,6 +1,56 @@
 {
   "version": 1,
   "projects": {
+    "example-feature": {
+      "projectType": "library",
+      "root": "libs/example-feature",
+      "sourceRoot": "libs/example-feature/src",
+      "prefix": "ng-mod-fed",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/example-feature"],
+          "options": {
+            "jestConfig": "libs/example-feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/example-feature/src/**/*.ts",
+              "libs/example-feature/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "example-shared": {
+      "projectType": "library",
+      "root": "libs/example-shared",
+      "sourceRoot": "libs/example-shared/src",
+      "prefix": "ng-mod-fed",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/example-shared"],
+          "options": {
+            "jestConfig": "libs/example-shared/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/example-shared/src/**/*.ts",
+              "libs/example-shared/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "mfe1": {
       "projectType": "application",
       "root": "apps/mfe1",

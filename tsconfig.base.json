@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@ng-mod-fed/example-feature": ["libs/example-feature/src/index.ts"],
+      "@ng-mod-fed/example-shared": ["libs/example-shared/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
