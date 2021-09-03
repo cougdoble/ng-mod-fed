@@ -2,19 +2,19 @@
 # yarn lockfile v1
 
 
-"@angular-architects/module-federation-runtime@^12.4.0":
-  version "12.4.0"
-  resolved "https://registry.yarnpkg.com/@angular-architects/module-federation-runtime/-/module-federation-runtime-12.4.0.tgz#e85d18e9df0c5b1ef6dd4db656600407d4971eba"
-  integrity sha512-JkouksIETSLbZiBhmKOKE5Ov+YEmw0aocAVVtJR+Y6M2JOOJEE4U3OVLjUCin3jwI7UuEVfFMOK4H3o1YahgoA==
+"@angular-architects/module-federation-runtime@^12.4.1":
+  version "12.4.1"
+  resolved "https://registry.yarnpkg.com/@angular-architects/module-federation-runtime/-/module-federation-runtime-12.4.1.tgz#19bd1211e723f132d18f4411aa8425c6a42362d7"
+  integrity sha512-Hq1Fxs4V5hh8GcH7VMXbybDC4UktxbtxukYZRB9jN0DI95gUlQpWNC41MSTN7GacF38hbMYN7gIjoaqhRx3UDw==
   dependencies:
     tslib "^2.0.0"
 
-"@angular-architects/module-federation@^12.4.0":
-  version "12.4.0"
-  resolved "https://registry.yarnpkg.com/@angular-architects/module-federation/-/module-federation-12.4.0.tgz#cf360103faf4f3d9a122f756c65f3976e473bd1e"
-  integrity sha512-wh19CBoVmZGLV2c0Vja1dXd4NM1CUeEoZvBOWj/XN2siTuhEbGRD97VgClzrUgQdPSJkZnicfKGqTnXIf1oegg==
+"@angular-architects/module-federation@^12.2.0":
+  version "12.4.1"
+  resolved "https://registry.yarnpkg.com/@angular-architects/module-federation/-/module-federation-12.4.1.tgz#bf884c90a9bd9a030b53df05f30e0b85104683df"
+  integrity sha512-UueMzu3RpNB6ZaJAo72ugSFVS9c5WTi4CimpNNemGrvPPDkpb6vlGwQ/6asDEVh2mqLNKodmglwFhzMD1KhzUg==
   dependencies:
-    "@angular-architects/module-federation-runtime" "^12.4.0"
+    "@angular-architects/module-federation-runtime" "^12.4.1"
     callsite "^1.0.0"
     ngx-build-plus "^12.2.0"
     node-fetch "^2.6.1"
