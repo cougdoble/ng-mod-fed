@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'ng-mod-fed-mfe1-entry',
   template: `<div class="remote-entry">
     <h2>mfe1's Remote Entry Component</h2>
-    <div>adding something so the project builds again, now with more stuff.</div>
+    <div>I am a remote component, here is my stuff.</div>
   </div>`,
   styles: [
     `

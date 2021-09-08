@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'reports-entry',
   template: `<div class="remote-entry">
     <h2>reports's Remote Entry Component</h2>
+    <div>here is some report stuff.</div>
   </div>`,
   styles: [
     `
