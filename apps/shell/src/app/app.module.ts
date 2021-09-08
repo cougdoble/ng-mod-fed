@@ -15,11 +15,11 @@ import { RouterModule } from '@angular/router';
           loadChildren: () =>
             import('mfe1/Module').then((m) => m.RemoteEntryModule),
         },
-        // {
-        //   path: 'reports',
-        //   loadChildren: () =>
-        //     import('reports/Module').then((m) => m.RemoteEntryModule),
-        // },
+        {
+          path: 'reports',
+          loadChildren: () =>
+            import('reports/Module').then((m) => m.RemoteEntryModule),
+        },
       ],
       { initialNavigation: 'enabledBlocking' }
     ),
